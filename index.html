@@ -11,6 +11,8 @@
 
   </head>
   <body>
+  <!-- particles.js container -->
+  <div id="particles-js"></div>
   <main>
     <section id="home">
       <div class="masthead">
@@ -79,5 +81,12 @@
     </section>
   </main> 
   <script src="./fslightbox/fslightbox.min.js"></script>
+  <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script type="text/javascript">
+    particlesJS.load('particles-js', 'particlesjs-config.json', function() {
+  console.log('particles.js loaded - callback');
+});
+  </script>
   </body>
 </html>
