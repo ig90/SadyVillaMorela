@@ -89,4 +89,19 @@ ul li:nth-child(odd) {
 .list-item-text {
   font-size: 0.8em;
 }
+
+#gallery img {
+  max-width: 250px;
+  max-height: 150px;
+  padding: 5px;
+  -webkit-transition: -webkit-transform .1s;
+  transition: -webkit-transform .1s;
+  transition: transform .1s;
+  transition: transform .1s, -webkit-transform .1s;
+}
+
+#gallery img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
 /*# sourceMappingURL=style.css.map */

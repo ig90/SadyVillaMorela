@@ -99,3 +99,16 @@ ul {
 .list-item-text {
     font-size: 0.8em;
 }
+#gallery {
+
+    img {
+        max-width: 250px;
+        max-height: 150px;
+        padding: 5px;
+        transition: transform .1s;
+    }
+    img:hover {
+        transform: scale(1.05);
+    }
+
+}
