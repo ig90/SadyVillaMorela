@@ -5,83 +5,138 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Sady - Villa Morela</title>
-  <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
-  <link rel="stylesheet" href="style.css" type="text/css">
-  <link rel="stylesheet" href="./fslightbox/fslightbox.min.css">
-
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="./fslightbox/fslightbox.min.css">
   </head>
   <body>
+      <nav>
+          <button class="hamburger" aria-expanded="false">
+          <span class="sr-only">Otwórz/zamknij menu</span>
+          <span class="hamburger__box">
+            <span class="hamburger__inner"></span>
+          </span>
+          </button>
+          <div class="navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item"><a class="navigation__link" href="#"><i class="fa fa-home" aria-hidden="true"></i>
+              </a></li>
+              <li class="navigation__item"><a class="navigation__link" href="#our-house">Nasz dom</a></li>
+              <li class="navigation__item"><a class="navigation__link" href="#gallery">Galeria</a></li>
+              <li class="navigation__item"><a class="navigation__link" href="#about">O nas</a></li>
+              <li class="navigation__item"><a class="navigation__link" href="#contact">Kontakt</a></li>
+            </ul>
+          </div>
+      </nav>
   <!-- particles.js container -->
   <div id="particles-js"></div>
   <main>
-    <section id="home">
+    <header id="home">
       <div class="masthead">
-        <div class="logo">
-          <img src="./assets/sady_primary_dark.svg" alt="logo">
+        <!-- <div class="logo"> -->
+          <img src="./assets/sady_primary.svg" class="logo" alt="logo">
+        <!-- </div> -->
+        <div class="photo-box">
+          <img src="./assets/img3.jpg" class="main-img" alt="villa morela">
         </div>
-      <h1>Villa Morela</h1>
+        <div class="welcome">
+          <h1>Villa Morela</h1>
+            <h2>Witamy na Mazurach!</h2>
+            <p>Twoje wakacje w pięknym domu nad jeziorem!</p>
+            <p>Zarezerwuj już dziś!</p>
+            <button class="btn-main"><a href="https://booking.previo.cz/?hotId=742574&hotelDetail=1&hideTabs=occupancy-pricelist&theme=green&showRoomType=642994" data-title="Rezerwacja" title="Rezerwacja"><span><i class="menu-icon fa fa-clipboard"></i> Rezerwacja</a></span></button>
+        </div>
       </div>
-      <div class="welcome">
-        <h2>Witamy na Mazurach!</h2>
-        <p> Stare Sady to Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium architecto rerum hic possimus rem eius, amet totam impedit voluptatem vero magni. Modi, ab itaque maxime sit cumque suscipit excepturi odio?</p>
-      <button>Zarezerwuj już dziś!</button>
-      </div>
-    </section>
-    <section id="house">
+    </header>
+    <section id="our-house">
       <h1>Nasz dom</h1>
-      <p>Przestronna Villa Morela
-         oferowana jest w całości, z parkingami i ogrodami na wyłączność.</p>
-      <h3>Parter</h3>
-      <p> Na parterze znajduje się duża przestrzeń wspólna – salon z wygodnymi kanapami i kominkiem oraz dużym telewizorem.
-         W kuchni jest wszystko, co niezbędne do całodziennego przygotowywania posiłków a przy długim stole zmieszczą się wszyscy
-          domownicy. Z salonu wychodzi się na słoneczny taras i do dużego ogrodu, gdzie jest miejsce na wspólne biesiady przy 
-          grillu.</p>
-      <h3>Piętro</h3>
-<p>W pięciu przestronnych sypialniach wygodnie może spać 13 osób. Apartament nad garażem jest oddzielony od reszty domu podwójnymi 
-  drzwiami. Posiada małą kuchnię i osobną łazienkę. Jest idealny dla rodziny z małym dzieckiem. Wszystkie łóżka możemy łączyć lub 
-  pościelić osobno. Przed przyjazdem prosimy o informację, jak je skonfigurować a pomocne w tym będą <a href="https://sady.pl/wp-content/uploads/2018/11/plany-morela.pdf" class="source-link">plany domu</a>.</p>
-      
-  <h5>Opis wyposażenia</h5>
-  <ul class="list-primary">
-        <li><strong>Salon</strong> <span class="list-item-text">
-            kominek, kanapy, komody, TV 55`, TV-Sat, blu-ray.</span></li>
-        <li>test 2</li>
-        <li>test 3</li>
-        <li>test 4</li>
-        <li>test 5</li>
-        <li>test 6</li>
-        <li>test 7</li>
-        <li>test 8</li>
-        <li>test 9</li>
-        <li>test 10</li>
+      <p>Przestronna, komfortowa willa z dobrym klimatem o powierzchni 400 m2.</p>
+      <p>Oferowana jest w całości, z parkingami i ogrodami na wyłączność.</p>
+      <div class="box-wrapper">
+        <div class="box">
+          <h3>Parter</h3>
+          <p> Na parterze znajduje się duża przestrzeń wspólna – salon z wygodnymi kanapami i kominkiem oraz dużym telewizorem.
+            W kuchni jest wszystko, co niezbędne do całodziennego przygotowywania posiłków a przy długim stole zmieszczą się wszyscy
+              domownicy. Z salonu wychodzi się na słoneczny taras i do dużego ogrodu, gdzie jest miejsce na wspólne biesiady przy 
+              grillu.</p>
+            <a href="./images/widok_od_poludnia.jpg" class="btn-secondary" data-fslightbox="example-gallery">Zdjęcia</a>
+        </div>
+        <div class="box">
+          <h3>Piętro</h3>
+          <p>W pięciu przestronnych sypialniach wygodnie może spać 13 osób. Apartament nad garażem jest oddzielony od reszty domu podwójnymi 
+          drzwiami. Posiada małą kuchnię i osobną łazienkę. Jest idealny dla rodziny z małym dzieckiem. Wszystkie łóżka możemy łączyć lub 
+          pościelić osobno. Przed przyjazdem prosimy o informację, jak je skonfigurować, a pomocne w tym będą <a href="https://sady.pl/wp-content/uploads/2018/11/plany-morela.pdf" class="source-link"><strong>plany domu</strong></a>.</p>
+          <a href="./images/widok_od_poludnia.jpg" class="btn-secondary" data-fslightbox="example-gallery">Zdjęcia</a>
+        </div>
+        <div class="box">
+          <h3>Klub i sauna</h3>
+          <p>W podziemiach domu urządziliśmy prawdziwe centrum rozrywki. Jest tu sala klubowa z kominkiem i Tv 60" oraz zestawem kina domowego, sala bilardowa oraz sauna fińska z osobną łazienką.</p>
+          <a href="./images/widok_od_poludnia.jpg" class="btn-secondary" data-fslightbox="example-gallery">Zdjęcia</a>
+        </div>
+      </div>
+     
+      <h4>Opis wyposażenia</h4>
+      <ul class="list-primary">
+          <li><strong>Salon</strong><span class="list-item-text"> kominek, kanapy, komody, TV 55", TV-Sat, blu-ray.</span></li>
+          <li><strong>Kuchnia z jadalnią</strong><span class="list-item-text">
+            wysoka lodówka z zamrażarką, zmywarka, płyta indukcyjna, piekarnik,
+            mikrofala, czajnik elektryczny, komplet garnków, naczyń i sztućców.</span></li>
+          <li><strong>Sypialnie</strong><span class="list-item-text">
+            szafy, komody, krzesła, stoliki, łóżka kontynentalne z materacami kieszeniowymi, dla
+            każdej osoby komplet pościeli, koc, mały i duży ręcznik.</span></li>
+          <li><strong>Łazienki</strong><span class="list-item-text">
+            wc, prysznic, umywalka z szafką, wieszaczki, suszarka do włosów, mydło w płynie, w
+            jednej z łazienek jest pralka</span></li>
+          <li><strong>Kluby</strong><span class="list-item-text">
+            kanapy, fotele, komoda, barek, TV 60", TV-Sat, blu-ray, zestaw kina domowego, stół
+            bilardowy.</span></li>
+          <li><strong>Taras i ogród</strong><span class="list-item-text">
+            leżaki, stół, ławki, grill, hamak, huśtawki i piaskownica dla dzieci.</span></li>
       </ul>
-    </section>
-    <section id="gallery">
+  </section>
+  <section id="gallery">
       <h1>Galeria</h1>
-      <a data-fslightbox="example-gallery" href="./images/widok_od_poludnia.jpg"> 
-        <img src="./images/widok_od_poludnia.jpg"> 
-      </a> 
-      <a data-fslightbox="example-gallery" href="./images/taras_od_poludnia_i_zachodu.jpg"> 
-        <img src="./images/taras_od_poludnia_i_zachodu.jpg"> 
+      <a data-fslightbox="example-gallery" href="./images/widok_od_poludnia.jpg">
+        <img src="./images/widok_od_poludnia.jpg">
+      </a>
+      <a data-fslightbox="example-gallery" href="./images/taras_od_poludnia_i_zachodu.jpg">
+        <img src="./images/taras_od_poludnia_i_zachodu.jpg">
       </a>
     </section>
     <section id="about">
       <h1>O nas</h1>
+      <p>
+        Stare Sady to cicha wieś letniskowa położona w samym sercu Mazur, na szlaku Wielkich Jezior, tuż nad jeziorem Tałty, 6 km od Mikołajek.
+      </p>
       <p>Nasze Sady to zatopiony w zieleni, kameralny kompleks stylowych drewnianych domów. Część z nich to ville z ogrodami do wynajęcia w całości, w innych oferujemy apartamenty i pokoje różnej wielkości.</p>
-      <p>Villa Morela jest częścią <a href="https://sady.pl" class="source-link">sady.pl</a></p>
+      <p>Villa Morela jest częścią <a href="https://sady.pl" class="source-link"><strong>sady.pl</strong></a></p>
     </section>
     <section id="contact">
       <h1>Kontakt</h1>
-      <h2>Napisz do nas lub
-        zadzwoń</h2>
-      <p>email: recepcja@sady.pl</p>
-      <p>tel. +48 603 298 599</p>
-      <address>Stare Sady 14B <br> 11-730 Mikołajki</address>
-    </section>
-  </main> 
+      <h2>Napisz do nas lub zadzwoń</h2>
+      <p><i class="fa fa-envelope"></i> email: recepcja@sady.pl</p>
+      <p><i class="fa fa-phone"></i> tel. +48 603 298 599</p>
+      <address><i class="fa fa-map-marker"></i> Stare Sady 14B<br>11-730 Mikołajki</address>
+      <button class="btn-main"><a href="https://booking.previo.cz/?hotId=742574&hotelDetail=1&hideTabs=occupancy-pricelist&theme=green&showRoomType=642994" data-title="Rezerwacja" title="Rezerwacja"><span><i class="menu-icon fa fa-clipboard"></i> Rezerwacja</a></span></button>
+
+      <h3>Społeczności:</h3>
+      <ul>
+        <li><a href="https://facebook.com/apartamentysady"><i class="fa fa-facebook-square"></i> facebook.com/sady</a></li>
+        <li><a href="https://instagram.com/sadypl"><i class="fa fa-instagram"></i> instagram.com/sadypl</a></li>
+      </ul>
+      <!-- remove - old map -->
+      <!-- <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyA5HO6OBC8I8SgcEP3Twg86FMyHCKxX0gY'></script><div style='overflow:hidden;height:500px;width:961px;'><div id='gmap_canvas' style='height:500px;width:961px;'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div> <a href="https://maps-generator.com/pl">Maps-Generator</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=f327bf78d7c96ce6138a000955cf6701d5cca322'></script><script type='text/javascript'>function init_map(){var myOptions = {zoom:12,center:new google.maps.LatLng(53.83074255765652,21.532314075678837),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(53.83074255765652,21.532314075678837)});infowindow = new google.maps.InfoWindow({content:'<strong>Ville i Apartamenty Sady</strong><br>Stare Sady 14ab<br>11-730 Mikołajki<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script> -->
+  	</section>
+    <footer>
+      <img src="assets/logo-light.png" class="logo" alt="logo">
+        <p>&copy; 2019<p>
+    </footer>
+  </main>
+  <script src="./main.js"></script>
+  <script src="https://use.fontawesome.com/1aa93ac555.js"></script>
   <script src="./fslightbox/fslightbox.min.js"></script>
   <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
-  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <!-- <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
   <script type="text/javascript">
     particlesJS.load('particles-js', 'particlesjs-config.json', function() {
   console.log('particles.js loaded - callback');
