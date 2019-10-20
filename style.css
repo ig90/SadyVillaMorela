@@ -369,12 +369,14 @@ nav .logo {
 #contact {
   padding-bottom: 0;
   position: relative;
+  min-height: 120vh;
 }
 
 #contact ul {
   padding: 0;
   margin: 20px;
   list-style-type: none;
+  text-align: left;
 }
 
 #contact ul a {
@@ -387,6 +389,35 @@ nav .logo {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+#contact .box-wrapper {
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 0 50px;
+}
+
+#contact .contact-box {
+  text-align: left;
+  border-left: 10px solid #808285;
+  border-bottom: 10px solid #808285;
+  border-top: none;
+  border-right: none;
+  padding: 20px;
+  height: 300px;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  margin-top: 10px;
+}
+
+#contact .contact-box + .contact-box {
+  border-top: 10px solid #808285;
+  border-right: 10px solid #808285;
+  border-left: none;
+  border-bottom: none;
+  -ms-grid-column-align: start;
+      justify-self: start;
+  margin-top: 0;
 }
 
 footer {
@@ -404,6 +435,11 @@ footer .logo {
   height: 100px;
   width: 150px;
   margin: 10px;
+}
+
+.qr-code {
+  width: auto;
+  height: auto;
 }
 
 .box-wrapper {

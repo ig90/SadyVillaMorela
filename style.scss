@@ -343,20 +343,47 @@ nav {
 #contact {
     padding-bottom: 0;
     position: relative;
+    min-height: 120vh;
     ul {
         padding:0;
-        margin:20px;
+        margin: 20px;
         list-style-type: none;
+        text-align: left;
         a{
             color: $color-font-paragraph;
         }
     }
+
     .embed-map {
         width: 100%;
         height: 400px;
         position: absolute;
         bottom:0;
         left:0;
+    }
+    .box-wrapper {
+        grid-template-columns: 1fr 1fr;
+        gap: 0 50px;
+    }
+
+    .contact-box {
+        text-align: left;
+        border-left: 10px solid $color-light-gray;
+        border-bottom: 10px solid $color-light-gray;
+        border-top: none;
+        border-right: none;
+        padding: 20px;
+        height: 300px;
+        justify-self: end;
+        margin-top: 10px;
+    }
+    .contact-box + .contact-box {
+        border-top: 10px solid $color-light-gray;
+        border-right: 10px solid $color-light-gray;
+        border-left: none;
+        border-bottom: none;
+        justify-self: start;
+        margin-top: 0;
     }
 }
   
@@ -376,6 +403,11 @@ footer {
         margin:10px;
 
     }
+}
+
+.qr-code{
+    width: auto;
+    height: auto;
 }
 
 .box-wrapper{
@@ -430,6 +462,11 @@ footer {
 
     .list-primary{
         margin: 2em;
+    }
+    #contact .box-wrapper {
+        // grid-template-areas: 
+        // "box box2";
+        
     }
     .box-wrapper {
 
