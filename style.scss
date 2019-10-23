@@ -59,7 +59,7 @@ h1{
 }
 
 .source-link {
-    color: $color-primary;
+    color: $color-accent;
 }
 
 a{
@@ -272,7 +272,7 @@ nav {
         }
     }
     &:hover {
-        background-color: rgba(0,0,0, 0); //#fff;
+        background-color: rgba(0,0,0, 0);
         border: 2px solid $color-primary;
         a{
             color: $color-primary;
@@ -343,10 +343,19 @@ nav {
 
 }
 
+#about {
+
+    img {
+        margin: 50px 0;
+        width: 95%;
+    }
+}
+
 #contact {
     padding-bottom: 0;
     position: relative;
-    min-height: 180vh; //125vh;
+    min-height: 100vh;
+
     ul {
         margin: 20px;
         text-align: center;
@@ -357,10 +366,38 @@ nav {
     .embed-map {
         width: 100%;
         height: 400px;
-        position: absolute;
-        bottom:0;
-        left:0;
     }
+
+        .box-wrapper {
+            grid-template-columns: 1fr;
+            margin: 30px 0;
+        }
+        .contact-box {
+            border-left: 10px solid $color-light-gray;
+            border-bottom: 10px solid $color-light-gray;
+            border-top: none;
+            border-right: none;
+            padding: 20px;
+            height: 300px;
+            margin-top: 10px;
+
+            &:hover {
+                border-left: 10px solid $color-accent;
+                border-bottom: 10px solid $color-accent;
+            }
+        }
+        .contact-box + .contact-box {
+            border-top: none;
+            border-right: 10px solid $color-light-gray;
+            border-left: none;
+            border-bottom: 10px solid $color-light-gray;
+            margin-top: 0;
+          &:hover {
+            border-right: 10px solid $color-accent;
+            border-bottom: 10px solid $color-accent;
+          }
+        }
+
 }
   
 footer {
@@ -381,14 +418,6 @@ footer {
     }
 }
 
-#about {
-
-    img {
-        margin: 50px 0;
-        width: 95%;
-    }
-}
-
 .qr-code{
     width: auto;
     height: auto;
@@ -402,6 +431,7 @@ footer {
      "box2"  
      "box3";
 }
+
 
 @media screen and (max-width: 767px){ 
 
@@ -480,7 +510,6 @@ footer {
             padding: 20px;
             height: 300px;
             justify-self: end;
-            margin-top: 10px;
         }
         .contact-box + .contact-box {
             border-top: 10px solid $color-light-gray;
@@ -488,7 +517,10 @@ footer {
             border-left: none;
             border-bottom: none;
             justify-self: start;
-            margin-top: 0;
+            &:hover{
+                border-top: 10px solid $color-accent;
+                border-bottom: none;
+            }
         }
     }
     .box-wrapper {
