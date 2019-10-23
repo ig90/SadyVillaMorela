@@ -65,13 +65,17 @@ h1{
 a{
     text-decoration: none;
 }
+ul {
+    list-style-type: none;
+    padding:0;
+}
+
 
 .list-primary {
     margin: 1em;
     padding:0;
 
     li {
-        list-style-type: none;
         padding: 1em;
         display: grid;
         grid-column-gap: 20px;	
@@ -249,15 +253,17 @@ nav {
     height: 44px;
     padding: 13px 31px;
     border-radius: 4px;
+    text-transform: uppercase;
+
 }
 
 .btn-main {
     @extend %button;
     background-color: $color-primary;
     border: 2px solid $color-primary;
+
     a {
         color: #fff;
-        text-transform: uppercase;
         span {
             font-weight: 600;
             font-size: 1em;
@@ -273,12 +279,11 @@ nav {
         }
     }
 }
-.btn-secondary{
+.btn-secondary {
     @extend %button;
     background-color: $color-light-gray;
     border: 2px solid $color-light-gray;
     color: #fff;
-    text-transform: uppercase;
     font-weight: 600;
     font-size: 12px;
     font-family: Poppins;
@@ -299,17 +304,14 @@ nav {
     position: relative;
     color: #fff;
 
-    .main-img {
+    .img-main {
         max-width: 100%;
-        max-height: 300px;
         padding: 30px;
         border: 10px solid $color-light-gray;
         transition: all 0.5s ease;
-
         &:hover {
             padding: 0;
-            height: 340px;
-            // transform: scale(1.2) translateY(5%);
+           // transform: scale(1.1); // translateY(5%);
         }
     }
     .photo-box {
@@ -320,7 +322,7 @@ nav {
         margin: 10px;
         z-index: 2;
         position: relative;
-        height: 360px;
+        height: 400px;
     }
 
     .welcome {
@@ -344,48 +346,20 @@ nav {
 #contact {
     padding-bottom: 0;
     position: relative;
-    min-height: 120vh;
+    min-height: 180vh; //125vh;
     ul {
-        padding:0;
         margin: 20px;
-        list-style-type: none;
-        text-align: left;
+        text-align: center;
         a{
             color: $color-font-paragraph;
         }
     }
-
     .embed-map {
         width: 100%;
         height: 400px;
         position: absolute;
         bottom:0;
         left:0;
-    }
-    .box-wrapper {
-        grid-template-columns: 1fr 1fr;
-        gap: 0 50px;
-        margin: 30px 0;
-    }
-
-    .contact-box {
-        text-align: left;
-        border-left: 10px solid $color-light-gray;
-        border-bottom: 10px solid $color-light-gray;
-        border-top: none;
-        border-right: none;
-        padding: 20px;
-        height: 300px;
-        justify-self: end;
-        margin-top: 10px;
-    }
-    .contact-box + .contact-box {
-        border-top: 10px solid $color-light-gray;
-        border-right: 10px solid $color-light-gray;
-        border-left: none;
-        border-bottom: none;
-        justify-self: start;
-        margin-top: 0;
     }
 }
   
@@ -407,9 +381,18 @@ footer {
     }
 }
 
+#about {
+
+    img {
+        margin: 50px 0;
+        width: 95%;
+    }
+}
+
 .qr-code{
     width: auto;
     height: auto;
+    margin: 10px;
 }
 
 .box-wrapper{
@@ -421,6 +404,7 @@ footer {
 }
 
 @media screen and (max-width: 767px){ 
+
      
     .box { // parter
         border-left: 10px solid $color-light-gray;
@@ -460,16 +444,53 @@ footer {
     }
 }
 
+@media screen and (min-width: 840px) {
+    #home {
+        .img-main {
+            max-width:800px;
+            max-height:400px;
+            width: auto;
+            height: auto;
+        }
+    }
+}
+
 @media screen and (min-width: 768px) {
 
     .list-primary{
         margin: 2em;
     }
-    // #contact .box-wrapper {
-    //     // grid-template-areas: 
-    //     // "box box2";
-        
-    // }
+
+    #contact{
+
+        ul {
+            text-align: left;
+        }
+        .box-wrapper {
+            grid-template-columns: 1fr 1fr;
+            gap: 0 50px;
+            margin: 30px 0;
+        }
+        .contact-box {
+            text-align: left;
+            border-left: 10px solid $color-light-gray;
+            border-bottom: 10px solid $color-light-gray;
+            border-top: none;
+            border-right: none;
+            padding: 20px;
+            height: 300px;
+            justify-self: end;
+            margin-top: 10px;
+        }
+        .contact-box + .contact-box {
+            border-top: 10px solid $color-light-gray;
+            border-right: 10px solid $color-light-gray;
+            border-left: none;
+            border-bottom: none;
+            justify-self: start;
+            margin-top: 0;
+        }
+    }
     .box-wrapper {
 
         grid-gap: 0;
@@ -496,20 +517,6 @@ footer {
         .box:last-child { // klub i sauna
             grid-area: box3;
             margin: -20% 5% 10% -10%;
-        }
-    }
-
-    #home {
-        .main-img {
-            max-width: 100%;
-            max-height: 400px;
-
-            &:hover{
-                height: 400px;
-            }
-        }
-        .photo-box {
-            height: 400px;
         }
     }
 }
