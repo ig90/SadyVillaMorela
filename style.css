@@ -298,8 +298,8 @@ nav .logo {
 }
 
 .btn-secondary {
-  background-color: #808285;
-  border: 2px solid #808285;
+  background-color: #545353;
+  border: 2px solid #545353;
   color: #fff;
   font-weight: 600;
   font-size: 12px;
@@ -323,14 +323,10 @@ nav .logo {
 
 #home .img-main {
   max-width: 100%;
-  padding: 30px;
-  border: 10px solid #808285;
+  padding: 10px;
+  border: 10px solid #545353;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-}
-
-#home .img-main:hover {
-  padding: 0;
 }
 
 #home .photo-box {
@@ -425,8 +421,8 @@ nav .logo {
 }
 
 #contact .contact-box {
-  border-left: 10px solid #808285;
-  border-bottom: 10px solid #808285;
+  border-left: 10px solid #545353;
+  border-bottom: 10px solid #545353;
   border-top: none;
   border-right: none;
   padding: 20px;
@@ -441,9 +437,9 @@ nav .logo {
 
 #contact .contact-box + .contact-box {
   border-top: none;
-  border-right: 10px solid #808285;
+  border-right: 10px solid #545353;
   border-left: none;
-  border-bottom: 10px solid #808285;
+  border-bottom: 10px solid #545353;
   margin-top: 0;
 }
 
@@ -511,8 +507,8 @@ footer .box-footer + .box-footer {
 
 @media screen and (max-width: 767px) {
   .box {
-    border-left: 10px solid #808285;
-    border-bottom: 10px solid #808285;
+    border-left: 10px solid #545353;
+    border-bottom: 10px solid #545353;
     padding: 6%;
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -523,16 +519,16 @@ footer .box-footer + .box-footer {
     -ms-grid-column: 1;
     grid-area: box2;
     border-left: none;
-    border-bottom: 10px solid #808285;
-    border-right: 10px solid #808285;
+    border-bottom: 10px solid #545353;
+    border-right: 10px solid #545353;
     border-top: none;
   }
   .box:last-child {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     grid-area: box3;
-    border-left: 10px solid #808285;
-    border-bottom: 10px solid #808285;
+    border-left: 10px solid #545353;
+    border-bottom: 10px solid #545353;
     border-right: none;
     border-top: none;
     margin-bottom: 50px;
@@ -578,8 +574,8 @@ footer .box-footer + .box-footer {
   }
   #contact .contact-box {
     text-align: left;
-    border-left: 10px solid #808285;
-    border-bottom: 10px solid #808285;
+    border-left: 10px solid #545353;
+    border-bottom: 10px solid #545353;
     border-top: none;
     border-right: none;
     padding: 20px;
@@ -588,8 +584,8 @@ footer .box-footer + .box-footer {
         justify-self: end;
   }
   #contact .contact-box + .contact-box {
-    border-top: 10px solid #808285;
-    border-right: 10px solid #808285;
+    border-top: 10px solid #545353;
+    border-right: 10px solid #545353;
     border-left: none;
     border-bottom: none;
     -ms-grid-column-align: stretch;
@@ -607,7 +603,7 @@ footer .box-footer + .box-footer {
         grid-template-areas: ". box2" "box ." ". box3";
   }
   .box-wrapper .box {
-    border: 10px solid #808285;
+    border: 10px solid #545353;
     padding: 6% 6% 8%;
     -ms-grid-row: 2;
     -ms-grid-column: 1;

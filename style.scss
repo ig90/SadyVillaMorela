@@ -4,13 +4,11 @@
 
 $color-primary: #548132;
 $color-secondary: #94bf26;
-$color-background: #545454; // dark gray
 $color-logo-gray: #545353;
 $color-dark: #141618;
 $color-light-background: #f3f3f3;
 $color-font-header: #626262;
 $color-font-paragraph: #444;
-$color-light-gray: #808285;
 $color-light-green: #e4eec1;
 $color-accent: #e37222; 
 
@@ -287,8 +285,8 @@ nav {
 }
 .btn-secondary {
     @extend %button;
-    background-color: $color-light-gray;
-    border: 2px solid $color-light-gray;
+    background-color: $color-logo-gray;
+    border: 2px solid $color-logo-gray;
     color: #fff;
     font-weight: 600;
     font-size: 12px;
@@ -308,18 +306,18 @@ nav {
 
 #home {
     position: relative;
-    color: #fff;
-
+    color: #fff;    
+    
     .img-main {
         max-width: 100%;
-        padding: 30px;
-        border: 10px solid $color-light-gray;
+        padding: 10px;
+        border: 10px solid $color-logo-gray;
         transition: all 0.5s ease;
         
-        &:hover {
-            padding: 0;
-           // transform: scale(1.1); // translateY(5%);
-        }
+        // &:hover {
+        //     padding: 0;
+        //    // transform: scale(1.1); // translateY(5%);
+        //}
     }
     .photo-box {
         display: flex;
@@ -397,8 +395,8 @@ nav {
             margin: 30px 0;
         }
         .contact-box {
-            border-left: 10px solid $color-light-gray;
-            border-bottom: 10px solid $color-light-gray;
+            border-left: 10px solid $color-logo-gray;
+            border-bottom: 10px solid $color-logo-gray;
             border-top: none;
             border-right: none;
             padding: 20px;
@@ -412,9 +410,9 @@ nav {
         }
         .contact-box + .contact-box {
             border-top: none;
-            border-right: 10px solid $color-light-gray;
+            border-right: 10px solid $color-logo-gray;
             border-left: none;
-            border-bottom: 10px solid $color-light-gray;
+            border-bottom: 10px solid $color-logo-gray;
             margin-top: 0;
           &:hover {
             border-right: 10px solid $color-accent;
@@ -475,22 +473,22 @@ footer {
 @media screen and (max-width: 767px){ 
 
     .box { // parter
-        border-left: 10px solid $color-light-gray;
-        border-bottom: 10px solid $color-light-gray;
+        border-left: 10px solid $color-logo-gray;
+        border-bottom: 10px solid $color-logo-gray;
         padding: 6%; // 8%;
         grid-area: box;
     }
     .box + .box { // pietro
         grid-area: box2;
         border-left: none;
-        border-bottom: 10px solid $color-light-gray;
-        border-right: 10px solid $color-light-gray;
+        border-bottom: 10px solid $color-logo-gray;
+        border-right: 10px solid $color-logo-gray;
         border-top: none;
     }
     .box:last-child { // klub i sauna
         grid-area: box3;
-        border-left: 10px solid $color-light-gray;
-        border-bottom: 10px solid $color-light-gray;
+        border-left: 10px solid $color-logo-gray;
+        border-bottom: 10px solid $color-logo-gray;
         border-right: none;
         border-top: none;
         margin-bottom: 50px;
@@ -541,8 +539,8 @@ footer {
         }
         .contact-box {
             text-align: left;
-            border-left: 10px solid $color-light-gray;
-            border-bottom: 10px solid $color-light-gray;
+            border-left: 10px solid $color-logo-gray;
+            border-bottom: 10px solid $color-logo-gray;
             border-top: none;
             border-right: none;
             padding: 20px;
@@ -551,8 +549,8 @@ footer {
 
         }
         .contact-box + .contact-box {
-            border-top: 10px solid $color-light-gray;
-            border-right: 10px solid $color-light-gray;
+            border-top: 10px solid $color-logo-gray;
+            border-right: 10px solid $color-logo-gray;
             border-left: none;
             border-bottom: none;
            // justify-self: start;
@@ -574,7 +572,7 @@ footer {
         ". box3";
 
         .box {   // parter
-            border: 10px solid $color-light-gray;
+            border: 10px solid $color-logo-gray;
             padding: 6% 6% 8%;
             grid-area: box;
             margin: -8% -10% 10% 5%;
