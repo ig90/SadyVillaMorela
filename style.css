@@ -53,6 +53,11 @@ a {
   text-decoration: none;
 }
 
+a:hover i {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -141,10 +146,10 @@ nav .logo {
 
 .hamburger, .navigation {
   text-align: center;
-  -webkit-transition: visibility 0s .4s, -webkit-transform .3s .1s ease-in-out;
-  transition: visibility 0s .4s, -webkit-transform .3s .1s ease-in-out;
-  transition: transform .3s .1s ease-in-out, visibility 0s .4s;
-  transition: transform .3s .1s ease-in-out, visibility 0s .4s, -webkit-transform .3s .1s ease-in-out;
+  -webkit-transition: display 0s .4s, -webkit-transform .3s .1s ease-in-out;
+  transition: display 0s .4s, -webkit-transform .3s .1s ease-in-out;
+  transition: transform .3s .1s ease-in-out, display 0s .4s;
+  transition: transform .3s .1s ease-in-out, display 0s .4s, -webkit-transform .3s .1s ease-in-out;
 }
 
 .hamburger--active {
@@ -215,7 +220,7 @@ nav .logo {
   position: absolute;
   top: 0;
   right: 0;
-  visibility: hidden;
+  display: none;
   -webkit-transform: translateX(250px);
           transform: translateX(250px);
 }
@@ -223,11 +228,11 @@ nav .logo {
 .navigation--active {
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
-  -webkit-transition: visibility 0s 0s, -webkit-transform .3s .1s ease-in-out;
-  transition: visibility 0s 0s, -webkit-transform .3s .1s ease-in-out;
-  transition: transform .3s .1s ease-in-out, visibility 0s 0s;
-  transition: transform .3s .1s ease-in-out, visibility 0s 0s, -webkit-transform .3s .1s ease-in-out;
-  visibility: visible;
+  -webkit-transition: display 0s 0s, -webkit-transform .3s .1s ease-in-out;
+  transition: display 0s 0s, -webkit-transform .3s .1s ease-in-out;
+  transition: transform .3s .1s ease-in-out, display 0s 0s;
+  transition: transform .3s .1s ease-in-out, display 0s 0s, -webkit-transform .3s .1s ease-in-out;
+  display: block;
 }
 
 .navigation__list {
@@ -366,15 +371,37 @@ nav .logo {
   margin-bottom: .3em;
 }
 
+#gallery img {
+  max-width: 250px;
+  max-height: 150px;
+  padding: 5px;
+  -webkit-transition: -webkit-transform .1s;
+  transition: -webkit-transform .1s;
+  transition: transform .1s;
+  transition: transform .1s, -webkit-transform .1s;
+}
+
+#gallery img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+#about p {
+  max-width: 80%;
+  margin: 20px auto;
+}
+
 #about img {
   margin: 50px 0;
-  width: 95%;
+  max-width: 100%;
+  -webkit-box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.5);
 }
 
 #contact {
-  padding-bottom: 0;
   position: relative;
   min-height: 100vh;
+  padding-bottom: 0;
 }
 
 #contact ul {
@@ -427,8 +454,14 @@ nav .logo {
 
 footer {
   background-color: #141618;
-  min-height: 200px;
   width: 100%;
+}
+
+footer .box-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
 }
 
 footer a {
@@ -436,10 +469,32 @@ footer a {
   color: #fff;
 }
 
+footer p {
+  margin-top: 0;
+}
+
+footer ul li {
+  display: inline-block;
+  margin: 8px;
+}
+
 footer .logo {
   height: 100px;
   width: 150px;
-  margin: 10px;
+}
+
+footer .box-footer {
+  margin: 20px 20px 0;
+  -ms-grid-column-align: start;
+      justify-self: start;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+footer .box-footer + .box-footer {
+  -ms-grid-column-align: end;
+      justify-self: end;
 }
 
 .qr-code {
@@ -537,8 +592,9 @@ footer .logo {
     border-right: 10px solid #808285;
     border-left: none;
     border-bottom: none;
-    -ms-grid-column-align: start;
-        justify-self: start;
+    -ms-grid-column-align: stretch;
+        justify-self: stretch;
+    max-width: 400px;
   }
   #contact .contact-box + .contact-box:hover {
     border-top: 10px solid #e37222;
@@ -573,21 +629,6 @@ footer .logo {
     grid-area: box3;
     margin: -20% 5% 10% -10%;
   }
-}
-
-#gallery img {
-  max-width: 250px;
-  max-height: 150px;
-  padding: 5px;
-  -webkit-transition: -webkit-transform .1s;
-  transition: -webkit-transform .1s;
-  transition: transform .1s;
-  transition: transform .1s, -webkit-transform .1s;
-}
-
-#gallery img:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
 }
 
 #particles-js {
