@@ -52,7 +52,7 @@ a {
 }
 
 a:hover i {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 ul {
@@ -135,7 +135,7 @@ nav .logo {
 
 .hamburger, .navigation {
   text-align: center;
-  transition: transform .3s .1s ease-in-out;
+  transition: transform .3s .1s ease-in-out, visibility 0s .4s;
 }
 
 .hamburger--active {
@@ -198,14 +198,34 @@ nav .logo {
   position: absolute;
   top: 0;
   right: 0;
+  visibility: hidden;
   display: none;
   transform: translateX(250px);
 }
 
 .navigation--active {
+  visibility: visible;
   display: block;
-  transition: transform .3s .1s ease-in-out;
-  transform: translateX(0px);
+  transform: translateX(0);
+  animation: slideIn .3s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(250px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(250px);
+  }
 }
 
 .navigation__list {
@@ -351,6 +371,10 @@ nav .logo {
 
 #contact ul a {
   color: #444;
+}
+
+#contact .contact-box i {
+  font-size: 1.5em;
 }
 
 #contact .embed-map {

@@ -64,7 +64,7 @@ a{
     text-decoration: none;
     &:hover {
         i{
-            transform: scale(1.1);
+            transform: scale(1.2);
         }
     }
 }
@@ -143,7 +143,7 @@ nav {
   
 .hamburger, .navigation {
     text-align: center;
-    transition: transform .3s .1s ease-in-out; //, visibility 0s .4s;
+    transition: transform .3s .1s ease-in-out, visibility 0s .4s;
 }
   
 .hamburger--active {
@@ -209,16 +209,32 @@ nav {
     position: absolute;
     top: 0;
     right: 0;
-   // visibility: hidden;
+    visibility: hidden;
     display: none;
     transform: translateX(250px);
 }
-  
+
 .navigation--active {
-   // visibility: visible;
+    visibility: visible;
     display: block;
-    transition: transform .3s .1s ease-in-out; //, visibility 0s 0s;
-    transform: translateX(0px);
+    //transition: transform .3s .1s ease-in-out, visibility 0s 0s;
+    transform: translateX(0);
+    animation: slideIn .3s ease-in-out;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(250px);
+    } 100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideOut {
+    0% {
+        transform: translateX(0);
+    }100% {
+        transform: translateX(250px);
+    }
 }
   
 .navigation__list {
@@ -276,6 +292,7 @@ nav {
         border: 2px solid $color-primary; 
         color: $color-primary;
     }
+
 }
 .btn-secondary {
     @extend %button;
@@ -362,6 +379,7 @@ nav {
     position: relative;
     min-height: 100vh;
     padding-bottom: 0;
+    
     ul {
         margin: 20px;
         text-align: center;
@@ -370,7 +388,10 @@ nav {
         }
         a {
             color: $color-font-paragraph;
-        }
+        }   
+    }
+    .contact-box i {
+        font-size: 1.5em;
     }
     .embed-map {
         width: 100%;
