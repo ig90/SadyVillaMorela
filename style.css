@@ -135,7 +135,7 @@ nav .logo {
 
 .hamburger, .navigation {
   text-align: center;
-  transition: transform .3s .1s ease-in-out, display 0s .4s;
+  transition: transform .3s .1s ease-in-out;
 }
 
 .hamburger--active {
@@ -203,9 +203,9 @@ nav .logo {
 }
 
 .navigation--active {
-  transform: translateX(0px);
-  transition: transform .3s .1s ease-in-out, display 0s 0s;
   display: block;
+  transition: transform .3s .1s ease-in-out;
+  transform: translateX(0px);
 }
 
 .navigation__list {
@@ -289,14 +289,9 @@ nav .logo {
 }
 
 #home .photo-box {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   margin: 10px;
   z-index: 2;
   position: relative;
-  height: 400px;
 }
 
 #home .welcome {
@@ -348,6 +343,10 @@ nav .logo {
 #contact ul {
   margin: 20px;
   text-align: center;
+}
+
+#contact ul li {
+  margin: 16px 0;
 }
 
 #contact ul a {
