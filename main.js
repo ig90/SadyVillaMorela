@@ -1,4 +1,10 @@
 
+
+/* particles */
+particlesJS.load('particles-js', 'particlesjs-config.json', function() {
+  console.log('particles.js loaded');
+});
+
 /* menu */
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('.navigation');
