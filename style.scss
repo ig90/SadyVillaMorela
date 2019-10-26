@@ -254,11 +254,17 @@ nav {
 
 %button {
     cursor: pointer;
-    height: 44px;
+    height: 50px;
     padding: 13px 31px;
     border-radius: 4px;
     text-transform: uppercase;
-
+    display: inline-block;
+    margin: 20px;
+    font-weight: 600;
+    font-size: 1em;
+    font-family: Poppins;
+    letter-spacing: .1em;
+    color: #fff;
 }
 
 .btn-main {
@@ -266,33 +272,16 @@ nav {
     background-color: $color-primary;
     border: 2px solid $color-primary;
 
-    a {
-        color: #fff;
-        span {
-            font-weight: 600;
-            font-size: 1em;
-            font-family: Poppins;
-            letter-spacing: .1em;
-        }
-    }
     &:hover {
         background-color: rgba(0,0,0, 0);
-        border: 2px solid $color-primary;
-        a{
-            color: $color-primary;
-        }
+        border: 2px solid $color-primary; 
+        color: $color-primary;
     }
 }
 .btn-secondary {
     @extend %button;
     background-color: $color-logo-gray;
     border: 2px solid $color-logo-gray;
-    color: #fff;
-    font-weight: 600;
-    font-size: 12px;
-    font-family: Poppins;
-    letter-spacing: .1em;
-    display: inline-block;
     margin-top: 15px;
 
     &:hover {
@@ -307,7 +296,7 @@ nav {
 #home {
     position: relative;
     color: #fff;    
-    
+
     .img-main {
         max-width: 100%;
         padding: 10px;
