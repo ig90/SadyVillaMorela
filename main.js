@@ -69,7 +69,6 @@ const createGallery = (path, galleryName, hName) => {
           img.src = x.href;
           gallery.appendChild(imgLink);
           updateFsLightbox();
-          console.log(x.href);
         } 
       }
     } 
