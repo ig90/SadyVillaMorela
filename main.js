@@ -61,15 +61,15 @@ const createGallery = (path, galleryName, hName) => {
 
         if (x.href.match(/\.(jpe?g|png|webp)$/)) { 
 
-            let imgLink = document.createElement('a');
-            let img = new Image();
-            imgLink.appendChild(img);
-            imgLink.setAttribute('data-fslightbox', galleryName);
-            imgLink.setAttribute('href', '.'+ x.href.substr(x.href.indexOf('/images')));
-
-            img.src = '.' + x.href.substr(x.href.indexOf('/images'));
-            gallery.appendChild(imgLink);
-            updateFsLightbox();
+          let imgLink = document.createElement('a');
+          let img = new Image();
+          imgLink.appendChild(img);
+          imgLink.setAttribute('data-fslightbox', galleryName);
+          imgLink.setAttribute('href', x.href); //setAttribute('href', '.'+ x.href.substr(x.href.indexOf('/images')));
+          img.src = x.href;
+          gallery.appendChild(imgLink);
+          updateFsLightbox();
+          console.log(x.href);
         } 
       }
     } 
