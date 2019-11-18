@@ -383,6 +383,7 @@ nav .logo {
 #contact .embed-map {
   width: 100%;
   height: 400px;
+  border: none;
 }
 
 #contact .box-wrapper {
