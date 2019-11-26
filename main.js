@@ -12,12 +12,13 @@ const handleClick = () => {
 
 hamburger.addEventListener('click', handleClick);
 
-// hide the menu after clicking on the menu item
+// hides the menu after clicking on the menu item
 nav_link.forEach((nav_link) => {
   nav_link.addEventListener('click', handleClick);
 });
 
-function showNavPanel() {
+// shows navbar after scroll down
+const showNavbar = () => {
 
   let scroll = this.scrollY;
   let nav = document.querySelector('nav');
@@ -32,7 +33,37 @@ function showNavPanel() {
   }
 }
 
-window.addEventListener("scroll", showNavPanel);
+const s = document.querySelectorAll('section');
+const navbar = document.querySelector('nav');
+let scrollpos = window.scrollY;
+const currentSectionName = document.createElement('h3');
+navbar.appendChild(currentSectionName);
+
+const getSectionHeading = (s) => {
+    return s.querySelector('h1').innerHTML;
+};
+
+// displays the current section on navbar
+const setSectionHeading = (section) => {
+  scrollpos = window.scrollY;
+
+  if (section !== null){
+    if(section.offsetTop <= scrollpos && scrollpos <= section.offsetHeight + section.offsetTop -30) {
+      currentSectionName.innerHTML = getSectionHeading(section);
+    } else {
+      currentSectionName.innerHTML = '';
+      section = section.nextElementSibling;
+      setSectionHeading(section);
+    }
+  }
+};
+
+window.addEventListener('scroll', ()=>{
+  let section = document.querySelector('section');
+  setSectionHeading(section);
+});
+
+window.addEventListener("scroll", showNavbar);
 
 /* gallery */
 
@@ -43,7 +74,7 @@ const createGalleryHeader = (hName) => {
   let h = document.createElement('h2');
       h.innerHTML = hName;
       gallery.appendChild(h);
-}
+};
 
 const createGallery = (path, galleryName, hName) => {
 
@@ -84,7 +115,6 @@ createGallery("./images/parter", "gallery-parter", "Parter");
 createGallery("./images/apartament", "gallery-apartament", "Apartament");
 createGallery("./images/pietro", "gallery-pietro", "Piętro");
 createGallery("./images/klub", "gallery-klub", "Klub");
-
 
 /* particles */
 particlesJS.load('particles-js', 'particlesjs-config.json', function() {
