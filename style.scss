@@ -65,8 +65,11 @@ a{
     color: $color-font-paragraph;
     &:hover {
         i{
-            transform: scale(1.2);
+          transform: scale(1.2);
         }
+    }
+    &:active {
+        font-weight: bold;
     }
 }
 ul {

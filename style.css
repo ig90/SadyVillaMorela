@@ -56,6 +56,10 @@ a:hover i {
   transform: scale(1.2);
 }
 
+a:active {
+  font-weight: bold;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
