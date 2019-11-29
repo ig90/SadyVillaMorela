@@ -351,7 +351,7 @@ nav .logo {
 }
 
 #gallery img {
-  max-width: 250px;
+  max-width: 200px;
   max-height: 150px;
   padding: 5px;
   transition: transform .1s;
@@ -376,6 +376,10 @@ nav .logo {
   position: relative;
   min-height: 100vh;
   padding-bottom: 0;
+}
+
+#contact h3 {
+  margin: 1em .5em 2em;
 }
 
 #contact i {
@@ -555,9 +559,10 @@ footer .box-footer + .box-footer {
     border-bottom: 10px solid #545353;
     border-top: none;
     border-right: none;
-    padding: 20px;
+    padding: 20px 30px;
     height: 300px;
     justify-self: end;
+    min-width: 374px;
   }
   #contact .contact-box + .contact-box {
     border-top: 10px solid #545353;
@@ -565,7 +570,8 @@ footer .box-footer + .box-footer {
     border-left: none;
     border-bottom: none;
     justify-self: stretch;
-    max-width: 400px;
+    min-width: auto;
+    max-width: 374px;
   }
   #contact .contact-box + .contact-box:hover {
     border-top: 10px solid #e37222;

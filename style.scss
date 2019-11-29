@@ -370,7 +370,7 @@ nav {
 #gallery {
 
     img {
-        max-width: 250px;
+        max-width: 200px;
         max-height: 150px;
         padding: 5px;
         transition: transform .1s;
@@ -398,6 +398,10 @@ nav {
     position: relative;
     min-height: 100vh;
     padding-bottom: 0;
+
+    h3 {
+        margin: 1em .5em 2em;
+    }
     i {
         min-width: 24px;
         margin-right: 5px;
@@ -574,19 +578,19 @@ footer {
             border-bottom: 10px solid $color-logo-gray;
             border-top: none;
             border-right: none;
-            padding: 20px;
+            padding: 20px 30px;
             height: 300px;
             justify-self: end;
-
+            min-width: 374px;
         }
         .contact-box + .contact-box {
             border-top: 10px solid $color-logo-gray;
             border-right: 10px solid $color-logo-gray;
             border-left: none;
             border-bottom: none;
-           // justify-self: start;
             justify-self: stretch;
-            max-width: 400px;
+            min-width: auto;
+            max-width: 374px;
             &:hover{
                 border-top: 10px solid $color-accent;
                 border-bottom: none;

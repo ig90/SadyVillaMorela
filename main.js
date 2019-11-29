@@ -40,7 +40,7 @@ const currentSectionName = document.createElement('h3');
 navbar.appendChild(currentSectionName);
 
 const getSectionHeading = (s) => {
-    return s.querySelector('h1').innerHTML;
+    return s.querySelector('h2').innerHTML;
 };
 
 // displays the current section on navbar
@@ -71,7 +71,7 @@ const gallery = document.querySelector('#gallery');
 
 const createGalleryHeader = (hName) => {
 
-  let h = document.createElement('h2');
+  let h = document.createElement('h3');
       h.innerHTML = hName;
       gallery.appendChild(h);
 };
